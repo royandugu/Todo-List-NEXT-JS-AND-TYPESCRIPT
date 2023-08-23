@@ -3,8 +3,8 @@
 import { FormEvent, useState } from "react";
 
 const AddTodo=()=>{
-    const [task,setTask]=useState("");
-
+    const [task,setTask]=useState<string>("");
+   
     const handleFormSubmit=(e:FormEvent<HTMLFormElement>):void=>{
         e.preventDefault();
     }
