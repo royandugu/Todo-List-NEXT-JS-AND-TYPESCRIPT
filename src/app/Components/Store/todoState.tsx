@@ -1,8 +1,12 @@
-import { Dispatch, SetStateAction, useState } from "react";
+"use client"
+
+import { useState,useContext } from "react";
 import { TodoList } from "../ListType/TodoList";
 
 import TodoContext from "./todoContext";
-const ToggleState=(props:any)=>{
+
+export const ToggleState=(props:any)=>{
+    
     const [todoList,setTodoList] = useState<TodoList[]>([]);
     
     return(
@@ -11,4 +15,9 @@ const ToggleState=(props:any)=>{
         </TodoContext.Provider>
     )
 }
-export default ToggleState;
+
+export const useTodo=() : TodoList[]=>{
+    const context=useContext(TodoContext);
+    if(!context) throw new Error("Context creation error");
+    else return context;
+}

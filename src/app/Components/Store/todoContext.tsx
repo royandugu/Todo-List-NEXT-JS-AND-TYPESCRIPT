@@ -1,3 +1,5 @@
+"use client"
+
 import {createContext} from "react";
 import { TodoList } from "../ListType/TodoList";
 
