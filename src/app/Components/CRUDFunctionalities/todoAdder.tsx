@@ -1,14 +1,6 @@
-type TodoList={
-    id:string;
-    name:string;
-    task:string;
-    completed:boolean;
-}
+import { TodoList } from "../ListType/TodoList";
 
 const TodoAdder=(todoList:TodoList):void=>{
-    
-}
-const myDefaultFunction=(something:Number):void=>{
-    
+       
 }
 export default TodoAdder; 
